@@ -1,0 +1,6 @@
+keys.yaml
+.mypy_cache/3.7/@plugins_snapshot.json
+*.pyc
+
+.env
+.vscode/settings.json
