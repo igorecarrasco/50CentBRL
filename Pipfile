@@ -9,8 +9,9 @@ flask = "*"
 
 [packages]
 twython = "*"
-pillow = "*"
 alpha-vantage = "*"
+pillow = "*"
+freetype-py = "*"
 
 [requires]
 python_version = "3.7"

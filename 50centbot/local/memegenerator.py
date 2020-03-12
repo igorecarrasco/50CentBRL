@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import PIL
 from PIL import ImageFont
 from PIL import Image
 from PIL import ImageDraw
@@ -15,12 +14,12 @@ def make_meme(topString, bottomString, filename):
 
     # find biggest font size that works
     fontSize = int(imageSize[1] / 5)
-    font = ImageFont.truetype("/Library/Fonts/Impact.ttf", fontSize)
+    font = ImageFont.truetype("impact.ttf", fontSize)
     topTextSize = font.getsize(topString)
     bottomTextSize = font.getsize(bottomString)
     while topTextSize[0] > imageSize[0] - 20 or bottomTextSize[0] > imageSize[0] - 20:
         fontSize = fontSize - 3
-        font = ImageFont.truetype("/Library/Fonts/Impact.ttf", fontSize)
+        font = ImageFont.truetype("impact.ttf", fontSize)
         topTextSize = font.getsize(topString)
         bottomTextSize = font.getsize(bottomString)
 
@@ -57,7 +56,7 @@ def make_meme(topString, bottomString, filename):
     draw.text(topTextPosition, topString, (255, 255, 255), font=font)
     draw.text(bottomTextPosition, bottomString, (255, 255, 255), font=font)
 
-    img.save("50c.jpeg")
+    img.save("/tmp/50c.jpeg")
 
 
 def get_upper(somedata):

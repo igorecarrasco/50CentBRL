@@ -21,7 +21,7 @@ class Twitter:
         """
         Uploads image to Twitter. Returns its media id
         """
-        with open("50c.jpeg", "rb") as f:
+        with open("/tmp/50c.jpeg", "rb") as f:
             img = b64encode(f.read())
             i = 0
             while i < 10:
