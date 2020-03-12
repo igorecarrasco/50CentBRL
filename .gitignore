@@ -4,3 +4,4 @@ keys.yaml
 
 .env
 .vscode/settings.json
+bin/deploy.sh
