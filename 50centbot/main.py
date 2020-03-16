@@ -34,7 +34,7 @@ def main(request: Request):
     visible_rate: str = f"R${(dec/2).quantize(Decimal('1.00'))}".replace(".", ",")
     tweet_rate: str = f"R${dec.quantize(Decimal('1.00'))}".replace(".", ",")
 
-    files = Path("./local/images").glob("*.*")
+    files = Path("local/images").glob("*.*")
 
     random_filename = random.choice([f for f in files])
 
